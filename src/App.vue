@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div style="width: 1024px; margin: 0 auto; border: 1px solid navy">
+        <header-compo></header-compo>
+        <middle-compo></middle-compo>
+        <footer-compo></footer-compo>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FooterCompo from './components/FooterCompo.vue';
+import HeaderCompo from './components/HeaderCompo.vue';
+import MiddleCompo from './components/MiddleCompo.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    name: 'App',
+    components: {
+        HeaderCompo,
+        FooterCompo,
+        MiddleCompo,
+    },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import 'assets/base.css';
+div {
+    color: #2a2b2c;
 }
 </style>
