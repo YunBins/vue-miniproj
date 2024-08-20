@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <h3>Footer</h3>
+        <h3>푸터</h3>
     </div>
 </template>
 
