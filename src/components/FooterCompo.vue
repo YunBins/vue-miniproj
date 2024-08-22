@@ -7,21 +7,19 @@
 
 <script>
 import axios from "axios";
+import {response} from "express";
 
 export default {};
 
-axios.get("https://hesil.site/api/health-check")
-    .then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-  // 오류발생시 실행
-  console.log("error");
-}).then(function() {
-  // 항상 실행
-});
-
-
-
+function apiTest() {
+  fetch("https://hesil.site/api/health-check", {
+    method: "GET"
+  }).then((response) => {if(response.ok) return response.json})
+      .then(data => {
+        console.log("성공");
+      })
+      .catch(err=>console.log(err));
+}
 </script>
 
 <style scoped></style>
