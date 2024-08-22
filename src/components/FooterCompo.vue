@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <h3>푸터</h3>
-      <button onclick="apiTest()">api test</button>
+      <button @click="apiTest()">api test</button>
     </div>
 </template>
 
@@ -14,9 +14,10 @@ export default {};
 function apiTest() {
   fetch("https://hesil.site/api/health-check", {
     method: "GET"
-  }).then((response) => {if(response.ok) return response.json})
+  }).then((response) => {if(response.ok) return response.text})
       .then(data => {
-        console.log("성공");
+        console.log(data);
+        console.log("22222");
       })
       .catch(err=>console.log(err));
 }
